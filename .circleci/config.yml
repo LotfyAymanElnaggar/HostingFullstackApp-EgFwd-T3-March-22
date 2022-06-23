@@ -11,12 +11,13 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
+      - checkout
       # install node and checkout code
       - node/install:
           node-version: "14"
       - aws-cli/setup:
           profile-name: fullstackuser
-      - checkout
+      - eb/setup
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
@@ -54,7 +55,6 @@ jobs:
           command: |
             npm run frontend:deploy
             npm run api:deploy
-
 
 workflows:
   udagram:
