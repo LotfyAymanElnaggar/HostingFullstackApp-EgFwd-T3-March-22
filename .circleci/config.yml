@@ -65,7 +65,7 @@ workflows:
             branches:
               only:
                 - main
-          # type: approval
+          type: approval
           requires:
             - build
       - deploy:
