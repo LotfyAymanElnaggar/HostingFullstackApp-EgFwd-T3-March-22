@@ -3,7 +3,7 @@ branch-defaults:
     environment: tifanaga
     group_suffix: null
 deploy:
-  artifact: www/Archive.zip
+  artifact: Archive.zip
 environment-defaults:
   udagram-api-dev:
     branch: null
