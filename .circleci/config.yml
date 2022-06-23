@@ -5,15 +5,16 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
+
 jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
+      - image: "cimg/node:14"
     steps:
       # install node and checkout code
       - node/install:
-          node-version: '14.15'         
+          node-version: '14'         
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
@@ -33,12 +34,12 @@ jobs:
       - run:
           name: Front-End Lint
           command: |
-            echo "TODO: Lint the frontend"
+            npm run frontend:lint
       # TODO: Build the frontend app
       - run:
           name: Front-End Build
           command: |
-            echo "TODO: Build the frontend app"
+            npm run frontend:build
       # TODO: Build the backend API      
       - run:
           name: API Build
