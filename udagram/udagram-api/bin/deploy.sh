@@ -1,6 +1,6 @@
 aws --version
 
-rm -rf www.zip
+rm -rf www/Archive.zip
 
 npm run build
 
