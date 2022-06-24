@@ -15,8 +15,7 @@ jobs:
       # install node and checkout code
       - node/install:
           node-version: "14"
-      - aws-cli/setup:
-          profile-name: fullstackuser
+      - aws-cli/setup
       - eb/setup
       # Use root level package.json to install dependencies in the frontend app
       - run:
