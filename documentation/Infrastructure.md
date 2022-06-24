@@ -1,7 +1,5 @@
 ## Udagram Infrastructure
 
-![Infrastructure](Infrastructure.png)
-
 ### AWS
 
 #### RDS Postgres
